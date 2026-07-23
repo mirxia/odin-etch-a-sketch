@@ -22,10 +22,10 @@
     flex: 1;
 }
 
-.active {
-
+.inactive {
+    background-color: white;
 }
 
-.inactive {
-
+.active {
+    background-color: lightblue;
 }

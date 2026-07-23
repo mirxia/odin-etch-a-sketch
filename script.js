@@ -1,5 +1,11 @@
 const container = document.querySelector(".container");
 
+container.addEventListener("mouseover", e => {
+    e.stopPropagation();
+    console.log(e.target);
+    e.target.classList.add("active");
+});
+
 function generateCells(width) {
     for (let i = 0; i < width; i++) {
         const col = document.createElement("div");
