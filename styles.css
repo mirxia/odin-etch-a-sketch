@@ -1,0 +1,31 @@
+.container {
+    width: 960px;
+    height: 960px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+.col {
+    flex: 1;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cell {
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    flex: 1;
+}
+
+.active {
+
+}
+
+.inactive {
+
+}
