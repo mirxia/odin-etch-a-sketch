@@ -4,6 +4,9 @@
 }
 
 .container {
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
     width: 960px;
     height: 960px;
     padding: 0px;
@@ -21,9 +24,9 @@
 }
 
 .cell {
-    border-style: solid;
+    /* border-style: solid;
     border-color: lightgrey;
-    border-width: 1px;
+    border-width: 1px; */
     flex: 1;
 }
 
