@@ -23,22 +23,35 @@ generateCells(16);
 
 const button = document.querySelector("#SetSizeButton");
 button.addEventListener("click", e => {
-    let width = parseInt(prompt("Enter grid with (max 100): ",""));
-    while (width == NaN || width < 1 || width > 100) {
+    let cancelFlag = false;
+    let width = 0;
+    let promptMessage = "Set grid size (max 100): "
+
+    do {
+        let input = prompt(promptMessage);
+        if (input === null) {
+            cancelFlag = true;
+            break;
+        }
+        width = parseInt(input);
         switch(true) {
-            case (width === NaN):
-                width = parseInt(prompt("Not an integer, try again: ",""));
+            case (Number.isNaN(width)):
+                promptMessage = "Must be an integer, try again: ";
                 break;
             case (width < 1):
-                width = parseInt(prompt("Must be positive, try again: ",""));
+                promptMessage = "Must be a positive integer, try again: ";
                 break;
             case (width > 100):
-                width = parseInt(prompt("Max size is 100, try again: ",""));
+                promptMessage = "Max size is 100, try again: ";
                 break;
         }
+    } while (!(width > 0 && width <= 100));
+
+    if (!cancelFlag) {
+        container.replaceChildren();
+        generateCells(width);
     }
-    container.replaceChildren();
-    generateCells(width);
+    
 });
 
 console.log(parseInt("abc"));
