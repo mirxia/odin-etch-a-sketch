@@ -53,5 +53,3 @@ button.addEventListener("click", e => {
     }
     
 });
-
-console.log(parseInt("abc"));
