@@ -2,7 +2,6 @@ const container = document.querySelector(".container");
 
 container.addEventListener("mouseover", e => {
     e.stopPropagation();
-    console.log(e.target);
     e.target.style.backgroundColor = getRandomHexColor();
 });
 
