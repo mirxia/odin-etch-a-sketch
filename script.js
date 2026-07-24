@@ -3,7 +3,7 @@ const container = document.querySelector(".container");
 container.addEventListener("mouseover", e => {
     e.stopPropagation();
     console.log(e.target);
-    e.target.classList.add("active");
+    e.target.style.backgroundColor = getRandomHexColor();
 });
 
 function generateCells(width) {
@@ -53,3 +53,7 @@ button.addEventListener("click", e => {
     }
     
 });
+
+function getRandomHexColor() {
+    return `#${(Math.random() * 0xFFFFFF << 0).toString(16).padStart(0)}`
+}
